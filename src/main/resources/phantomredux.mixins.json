@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "PhantomReduxMixin"
+    "PhantomEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
