@@ -1,38 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "phantomredux",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Phantom Redux",
+  "description": "Changes to phantoms to make them better (maybe)!",
   "authors": [
-    "Me!"
+    "CyborgCabbage"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/CyborgCabbage/PhantomRedux",
+    "sources": "https://github.com/CyborgCabbage/PhantomRedux"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/phantomredux/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "CyborgCabbage.phantomredux.PhantomReduxMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "phantomredux.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.9",
-    "fabric-api": "*",
-    "minecraft": "~1.19",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabricloader": "*",
+    "fabric-api": "*"
   }
 }
