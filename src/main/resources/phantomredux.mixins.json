@@ -8,8 +8,9 @@
     "PlayerEntityMixin"
   ],
   "client": [
-    "MobEntityRendererMixin",
-    "PhantomEntityMixin"
+    "PhantomEntityMixin",
+    "EntityMixin",
+    "EyesFeatureRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

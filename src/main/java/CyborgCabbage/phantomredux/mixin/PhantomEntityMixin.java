@@ -19,10 +19,10 @@ public abstract class PhantomEntityMixin extends FlyingEntity {
     }
 
     @Inject(method = "tick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;addParticle(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V", shift = At.Shift.BEFORE), cancellable = true)
-    private void injected(CallbackInfo cir) {
+    private void disableParticles(CallbackInfo cir) {
         if(this.world.isClient) {
             ClientPlayerEntity player = MinecraftClient.getInstance().player;
-            if (player != null && !Util.phantomCanInteract(player)) cir.cancel();
+            if (player != null && Util.phantomInteract((PhantomEntity)(Object) this, player) == Util.PhantomInteractState.NONE) cir.cancel();
         }
     }
 }
