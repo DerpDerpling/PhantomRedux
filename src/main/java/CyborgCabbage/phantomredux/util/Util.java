@@ -33,11 +33,6 @@ public class Util {
     }
 
     private static PhantomInteractState fromTime(int time){
-        /*return switch (time/20 % 3){
-            case 0 -> PhantomInteractState.NONE;
-            case 1 -> PhantomInteractState.HALF;
-            default -> PhantomInteractState.FULL;
-        };*/
         if(time > DAY*4) return PhantomInteractState.FULL;
         if(time > DAY*3) return PhantomInteractState.HALF;
         return PhantomInteractState.NONE;
