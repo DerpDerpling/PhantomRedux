@@ -14,7 +14,7 @@ public class Util {
         HALF,
         FULL
     }
-    private static final int DAY = 10*20;
+    private static final int DAY = 24000;
 
     public static PhantomInteractState phantomInteract(@Nullable PhantomEntity phantom, Entity entity){
         if(phantom != null && phantom.hasCustomName()) return PhantomInteractState.FULL;
