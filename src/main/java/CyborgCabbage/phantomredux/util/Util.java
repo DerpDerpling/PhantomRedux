@@ -18,7 +18,7 @@ public class Util {
 
     public static PhantomInteractState phantomInteract(@Nullable PhantomEntity phantom, Entity entity){
         if(phantom != null && phantom.hasCustomName()) return PhantomInteractState.FULL;
-        if(entity.world.isClient){
+        if(entity.getWorld().isClient){
             if(entity instanceof PlayerEntity player) {
                 return fromTime(((SyncedTimeSinceRest) player).getSyncedTimeSinceRest());
             }
